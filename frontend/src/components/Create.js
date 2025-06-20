@@ -1,4 +1,4 @@
-import React from 'react'
+import {React} from 'react'
 import {Box, Button, Typography} from '@mui/material'
 import MyDatePickerField from './forms/MyDatePickerField'
 import MyTextField from './forms/MyTextField'
@@ -23,6 +23,7 @@ const Create = () => {
     const submission = (data) => {
         const StartDate = Dayjs(data.start_date["%d"]).format("YYYY-MM-DD")
         const EndDate = Dayjs(data.end_date["%d"]).format("YYYY-MM-DD")
+
 
         AxiosInstance.post(
             `project/`,{
